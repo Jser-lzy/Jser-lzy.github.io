@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    彙整: 2016/3
+  
+</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2016/03/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+
+
+  <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Hexo</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Hexo</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">John Doe</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">類別</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">標籤</a>
+                
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">彙整</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">1</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="external">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/denjones" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          
+
+  
+  
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
+        </div>
+        <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/03/23/关于跨域/" >
+  关于跨域
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/03/23/关于跨域/"><span class="article-date">
+  2016-03-23
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <p>##关于跨域<br>前端跨域请求原理及实践 2017-02-17<br>一、 跨域请求的含义</p>
+<p>浏览器的同源策略，出于防范跨站脚本的攻击，禁止客户端脚本（如 JavaScript）对不同域的服务进行跨站调用。</p>
+<p>一般的，只要网站的 协议名protocol、 主机host、 端口号port 这三个中的任意一个不同，网站间的数据请求与传输便构成了跨域调用。这也是我们下面实践的理论基础。我们利用 NodeJs 创建了两个服务器，分别监听 3000、 3001 端口（下面简称 服务器3000 与 服务器3001 ），由于端口号不一样，这两个服务器以及服务器上页面通信构成了跨域请求。</p>
+<p>在服务器3000 上有如下的页面：</p>
+<p>img</p>
+<p>服务器3000 上的请求页面中包含如下 JavaScript 代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">$(<span class="string">"#submit"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> data = &#123;</div><div class="line"></div><div class="line">        <span class="attr">name</span>: $(<span class="string">"#name"</span>).val(),</div><div class="line"></div><div class="line">        <span class="attr">id</span>: $(<span class="string">"#id"</span>).val()</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $.ajax(&#123;</div><div class="line"></div><div class="line">        <span class="attr">type</span>: <span class="string">'POST'</span>,</div><div class="line"></div><div class="line">        <span class="attr">data</span>: data,</div><div class="line"></div><div class="line">        <span class="attr">url</span>: <span class="string">'http://localhost:3000/ajax/deal'</span>,</div><div class="line"></div><div class="line">        <span class="attr">dataType</span>: <span class="string">'json'</span>,</div><div class="line"></div><div class="line">        <span class="attr">cache</span>: <span class="literal">false</span>,</div><div class="line"></div><div class="line">        <span class="attr">timeout</span>: <span class="number">5000</span>,</div><div class="line"></div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="built_in">console</span>.log(data)</div><div class="line"></div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        <span class="attr">error</span>: <span class="function"><span class="keyword">function</span>(<span class="params">jqXHR, textStatus, errorThrown</span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'error '</span> + textStatus + <span class="string">' '</span> + errorThrown);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>服务器3000 对应的处理函数为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">pp.post(‘/ajax/deal’, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"server accept: "</span>, req.body.name, req.body.id)</div><div class="line"></div><div class="line"><span class="keyword">var</span> data = &#123;</div><div class="line"></div><div class="line">    <span class="attr">name</span>: req.body.name + <span class="string">' - server 3000 process'</span>,</div><div class="line"></div><div class="line">    <span class="attr">id</span>: req.body.id + <span class="string">' - server 3000 process'</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">res.send(data)</div><div class="line"></div><div class="line">res.end()</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>请求页面返回结果：</p>
+<p>img</p>
+<p>此处数据处理成功。</p>
+<p>由于数据请求一般都是由页面发送数据字段，服务器根据这些字段作相应的处理，如数据库查询，字符串操作等等。所以我们这里简单的处理数据（在数据后面加上字符串‘server 3000 process’），并且返回给浏览器，表示数据经过服务器端处理。</p>
+<p>如果让 服务器3000 上的页面向 服务器 3001 发起请求会怎样呢？</p>
+<p>将请求页面中的 ajax 请求路径改为：</p>
+<p>$.ajax({<br>…</p>
+<p>url: ‘<a href="http://localhost:3001/ajax/deal" target="_blank" rel="external">http://localhost:3001/ajax/deal</a>‘,</p>
+<p>…<br>});<br>服务器3001 对应的处理函数与 服务器3000 类似：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">app.post(‘/ajax/deal’, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"server accept: "</span>, req.body.name, req.body.id)</div><div class="line"></div><div class="line"><span class="keyword">var</span> data = &#123;</div><div class="line"></div><div class="line">    <span class="attr">name</span>: req.body.name + <span class="string">' - server 3001 process'</span>,</div><div class="line"></div><div class="line">    <span class="attr">id</span>: req.body.id + <span class="string">' - server 3001 process'</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">res.send(data)</div><div class="line"></div><div class="line">res.end()</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>结果如下：</p>
+<p>img</p>
+<p>结果证明了我们上面所说的端口号不同，发生了跨域请求的调用。</p>
+<p>需要注意的是，服务器 3001 控制台有输出：</p>
+<p>server accept: chiaki 3001<br>这说明跨域请求并非是浏览器限制了发起跨站请求，而是请求可以正常发起，到达服务器端，但是服务器返回的结果会被浏览器拦截。</p>
+<p>二、 利用 JSONP 实现跨域调用</p>
+<p>说道跨域调用，可能大家首先想到的或者听说过的就是 JSONP 了。</p>
+<p>2.1 什么是JSONP</p>
+<p>JSONP (JSON with Padding or JSON-P) is a JSON extension used by web developers to overcome the cross-domain restrictions imposed by browsers’ same-origin policy that limits access to resources retrieved from origins other than the one the page was served by. In layman’s terms, one website cannot just simply access the data from another website.<br>It was developed because handling a browsers’ same origin policy can be difficult, so using JSONP abstracts the difficulties and makes it easier.<br>JSON stands for “JavaScript Object Notation”, a format by which object fields are represented as key-value pairs which is used to represent data.<br>JSONP 是 JSON 的一种使用模式，可以解决主流浏览器的跨域数据访问问题。其原理是根据 XmlHttpRequest 对象受到同源策略的影响，而</p>
+<p>这样从服务器返回的代码就可以直接在这个 script 标签中运行了。下面我们自己实现一个 JSONP：</p>
+<p>服务器 3000请求页面的 JavaScript 代码中，只有回调函数 jsonpCallback：</p>
+<p>function jsonpCallback(data) {<br>console.log(“jsonpCallback: “+data.name)<br>}<br>服务器 3000请求页面还包含一个 script 标签：</p>
+<p>服务器 3001上对应的处理函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">app.get(‘/jsonServerResponse’, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> cb = req.query.jsonp</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(cb)</div><div class="line"></div><div class="line"><span class="keyword">var</span> data = <span class="string">'var data = &#123;'</span> + <span class="string">'name: $("#name").val() + " - server 3001 jsonp process",'</span> + <span class="string">'id: $("#id").val() + " - server 3001 jsonp process"'</span> + <span class="string">'&#125;;'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> debug = <span class="string">'console.log(data);'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> callback = <span class="string">'$("#submit").click(function() &#123;'</span> + data + cb + <span class="string">'(data);'</span> + debug + <span class="string">'&#125;);'</span></div><div class="line"></div><div class="line">res.send(callback)</div><div class="line"></div><div class="line">res.end()</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>与上面一样，我们在所获取的参数后面加上 “ – server 3001 jsonp process” 代表服务器对数据的操作。从代码中我么可以看到，处理函数除了根据参数做相应的处理，更多的也是进行字符串的拼接。</p>
+<p>最终的结果为：</p>
+<p>img</p>
+<p>2.4 JSONP 总结</p>
+<p>至此，我们了解了 JSONP 的原理以及实现方式，它帮我们实现前端跨域请求，但是在实践的过程中，我们还是可以发现它的不足：</p>
+<p>只能使用 GET 方法发起请求，这是由于 script 标签自身的限制决定的。</p>
+<p>不能很好的发现错误，并进行处理。与 Ajax 对比，由于不是通过 XmlHttpRequest 进行传输，所以不能注册 success、 error 等事件监听函数。</p>
+<p>三、 使用 CORS 实现跨域调用</p>
+<p>3.1 什么是 CORS？</p>
+<p>Cross-Origin Resource Sharing（CORS）跨域资源共享是一份浏览器技术的规范，提供了 Web 服务从不同域传来沙盒脚本的方法，以避开浏览器的同源策略，是 JSONP 模式的现代版。与 JSONP 不同，CORS 除了 GET 要求方法以外也支持其他的 HTTP 要求。用 CORS 可以让网页设计师用一般的 XMLHttpRequest，这种方式的错误处理比 JSONP 要来的好。另一方面，JSONP 可以在不支持 CORS 的老旧浏览器上运作。现代的浏览器都支持 CORS。</p>
+<p>3.2 CORS 的实现</p>
+<p>还是以 服务器 3000 上的请求页面向 服务器 3001 发送请求为例。</p>
+<p>服务器 3000 上的请求页面 JavaScript 不变，如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">$(<span class="string">"#submit"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> data = &#123;</div><div class="line"></div><div class="line">        <span class="attr">name</span>: $(<span class="string">"#name"</span>).val(),</div><div class="line"></div><div class="line">        <span class="attr">id</span>: $(<span class="string">"#id"</span>).val()</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $.ajax(&#123;</div><div class="line"></div><div class="line">        <span class="attr">type</span>: <span class="string">'POST'</span>,</div><div class="line"></div><div class="line">        <span class="attr">data</span>: data,</div><div class="line"></div><div class="line">        <span class="attr">url</span>: <span class="string">'http://localhost:3001/cors'</span>,</div><div class="line"></div><div class="line">        <span class="attr">dataType</span>: <span class="string">'json'</span>,</div><div class="line"></div><div class="line">        <span class="attr">cache</span>: <span class="literal">false</span>,</div><div class="line"></div><div class="line">        <span class="attr">timeout</span>: <span class="number">5000</span>,</div><div class="line"></div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="built_in">console</span>.log(data)</div><div class="line"></div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        <span class="attr">error</span>: <span class="function"><span class="keyword">function</span>(<span class="params">jqXHR, textStatus, errorThrown</span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'error '</span> + textStatus + <span class="string">' '</span> + errorThrown);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>服务器 3001上对应的处理函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">app.post(‘/cors’, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</div><div class="line"></div><div class="line">res.header(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"X-Requested-With"</span>);</div><div class="line"></div><div class="line">res.header(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"PUT,POST,GET,DELETE,OPTIONS"</span>);</div><div class="line"></div><div class="line">res.header(<span class="string">"X-Powered-By"</span>, <span class="string">' 3.2.1'</span>)</div><div class="line"></div><div class="line">res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> data = &#123;</div><div class="line"></div><div class="line">    <span class="attr">name</span>: req.body.name + <span class="string">' - server 3001 cors process'</span>,</div><div class="line"></div><div class="line">    <span class="attr">id</span>: req.body.id + <span class="string">' - server 3001 cors process'</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(data)</div><div class="line"></div><div class="line">res.send(data)</div><div class="line"></div><div class="line">res.end()</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>在服务器中对返回信息的请求头进行了设置。</p>
+<p>最终的结果为：</p>
+<p>img</p>
+<p>3.3 CORS 中属性的分析<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin</div><div class="line"></div><div class="line">The origin parameter specifies a URI that may access the resource. The browser must enforce this. For requests without credentials, the server may specify “*” as a wildcard, thereby allowing any origin to access the resource.</div><div class="line"></div><div class="line">Access-Control-Allow-Methods</div><div class="line"></div><div class="line">Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request. The conditions under which a request is preflighted are discussed above.</div><div class="line"></div><div class="line">Access-Control-Allow-Headers</div><div class="line"></div><div class="line">Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.</div></pre></td></tr></table></figure></p>
+<p>3.4 CORS 与 JSONP 的对比</p>
+<p>CORS 除了 GET 方法外，也支持其它的 HTTP 请求方法如 POST、 PUT 等。<br>CORS 可以使用 XmlHttpRequest 进行传输，所以它的错误处理方式比 JSONP 好。<br>JSONP 可以在不支持 CORS 的老旧浏览器上运作。<br>四、 一些其它的跨域调用方式</p>
+<p>4.1 window.name</p>
+<p>window对象有个name属性，该属性有个特征：即在一个窗口 (window) 的生命周期内，窗口载入的所有的页面都是共享一个 window.name 的，每个页面对 window.name 都有读写的权限，window.name 是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。</p>
+
+        
+      </div>
+    </div>
+
+  
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2017 Hexo - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

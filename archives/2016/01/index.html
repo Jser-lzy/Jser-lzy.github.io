@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    彙整: 2016/1
+  
+</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2016/01/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+
+
+  <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Hexo</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Hexo</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">John Doe</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">類別</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">標籤</a>
+                
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">彙整</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">1</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="external">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/denjones" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          
+
+  
+  
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
+        </div>
+        <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/01/13/this指向问题/" >
+  this指向问题
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/01/13/this指向问题/"><span class="article-date">
+  2016-01-13
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <p>##关于this指向问题<br>与我们常见的很多语言不同，JavaScript 函数中的 this 指向并不是在函数定义的时候确定的，而是在调用的时候确定的。换句话说，函数的调用方式决定了 this 指向。</p>
+<p>JavaScript 中，普通的函数调用方式有三种：直接调用、方法调用和 new 调用。除此之外，还有一些特殊的调用方式，比如通过bind() 将函数绑定到对象之后再进行调用、通过 call()、apply() 进行调用等。而 es6 引入了箭头函数之后，箭头函数调用时，其 this 指向又有所不同。下面就来分析这些情况下的 this 指向。</p>
+<p>直接调用</p>
+<p>直接调用，就是通过 函数名(…) 这种方式调用。这时候，函数内部的 this 指向全局对象，在浏览器中全局对象是 window，在 NodeJs 中全局对象是 global。</p>
+<p>来看一个例子：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div></pre></td><td class="code"><pre><div class="line">// 简单兼容浏览器和 NodeJs 的全局对象</div><div class="line">const _global = typeof window === “undefined” ? global : window;</div><div class="line">function test() &#123;</div><div class="line">console.log(this === _global);    // true</div><div class="line">&#125;</div><div class="line">test(); // 直接调用</div><div class="line">这里需要注意的一点是，直接调用并不是指在全局作用域下进行调用，在任何作用域下，直接通过 函数名(…) 来对函数进行调用的方式，都称为直接调用。比如下面这个例子也是直接调用</div><div class="line"></div><div class="line">(function(_global) &#123;</div><div class="line">// 通过 IIFE 限定作用域</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">function test() &#123;</div><div class="line"></div><div class="line">    console.log(this === _global);  // true</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">test();     // 非全局作用域下的直接调用</div><div class="line">&#125;)(typeof window === “undefined” ? global : window);</div><div class="line">bind() 对直接调用的影响</div><div class="line"></div><div class="line">还有一点需要注意的是 bind() 的影响。Function.prototype.bind() 的作用是将当前函数与指定的对象绑定，并返回一个新函数，这个新函数无论以什么样的方式调用，其 this 始终指向绑定的对象。还是来看例子：</div><div class="line"></div><div class="line">const obj = &#123;&#125;;</div><div class="line">function test() &#123;</div><div class="line">console.log(this === obj);</div><div class="line">&#125;</div><div class="line">const testObj = test.bind(obj);</div><div class="line">test(); // false</div><div class="line">testObj(); // true</div><div class="line">那么 bind() 干了啥？不妨模拟一个 bind() 来了解它是如何做到对 this 产生影响的。</div><div class="line"></div><div class="line">const obj = &#123;&#125;;</div><div class="line">function test() &#123;</div><div class="line">console.log(this === obj);</div><div class="line">&#125;</div><div class="line">// 自定义的函数，模拟 bind() 对 this 的影响</div><div class="line">function myBind(func, target) &#123;</div><div class="line">return function() &#123;</div><div class="line"></div><div class="line">    return func.apply(target, arguments);</div><div class="line"></div><div class="line">&#125;;</div><div class="line">&#125;</div><div class="line">const testObj = myBind(test, obj);</div><div class="line">test(); // false</div><div class="line">testObj(); // true</div><div class="line">从上面的示例可以看到，首先，通过闭包，保持了 target，即绑定的对象；然后在调用函数的时候，对原函数使用了 apply 方法来指定函数的 this。当然原生的 bind() 实现可能会不同，而且更高效。但这个示例说明了 bind() 的可行性。</div><div class="line"></div><div class="line">call 和 apply 对 this 的影响</div><div class="line"></div><div class="line">上面的示例中用到了 Function.prototype.apply()，与之类似的还有 Function.prototype.call()。这两方法的用法请大家自己通过链接去看文档。不过，它们的第一个参数都是指定函数运行时其中的 this 指向。</div><div class="line"></div><div class="line">不过使用 apply 和 call 的时候仍然需要注意，如果目录函数本身是一个绑定了 this 对象的函数，那 apply 和 call 不会像预期那样执行，比如</div><div class="line"></div><div class="line">const obj = &#123;&#125;;</div><div class="line">function test() &#123;</div><div class="line">console.log(this === obj);</div><div class="line">&#125;</div><div class="line">// 绑定到一个新对象，而不是 obj</div><div class="line">const testObj = test.bind(&#123;&#125;);</div><div class="line">test.apply(obj); // true</div><div class="line">// 期望 this 是 obj，即输出 true</div><div class="line">// 但是因为 testObj 绑定了不是 obj 的对象，所以会输出 false</div><div class="line">testObj.apply(obj); // false</div><div class="line">由此可见，bind() 对函数的影响是深远的，慎用！</div><div class="line"></div><div class="line">方法调用</div><div class="line"></div><div class="line">方法调用是指通过对象来调用其方法函数，它是 对象.方法函数(…) 这样的调用形式。这种情况下，函数中的 this 指向调用该方法的对象。但是，同样需要注意 bind() 的影响。</div><div class="line"></div><div class="line">const obj = &#123;</div><div class="line">// 第一种方式，定义对象的时候定义其方法</div><div class="line"></div><div class="line">test() &#123;</div><div class="line"></div><div class="line">    console.log(this === obj);</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">// 第二种方式，对象定义好之后为其附加一个方法(函数表达式)</div><div class="line">obj.test2 = function() &#123;</div><div class="line">console.log(this === obj);</div><div class="line">&#125;;</div><div class="line">// 第三种方式和第二种方式原理相同</div><div class="line">// 是对象定义好之后为其附加一个方法(函数定义)</div><div class="line">function t() &#123;</div><div class="line">console.log(this === obj);</div><div class="line">&#125;</div><div class="line">obj.test3 = t;</div><div class="line">// 这也是为对象附加一个方法函数</div><div class="line">// 但是这个函数绑定了一个不是 obj 的其它对象</div><div class="line">obj.test4 = (function() &#123;</div><div class="line">console.log(this === obj);</div><div class="line">&#125;).bind(&#123;&#125;);</div><div class="line">obj.test(); // true</div><div class="line">obj.test2(); // true</div><div class="line">obj.test3(); // true</div><div class="line">// 受 bind() 影响，test4 中的 this 指向不是 obj</div><div class="line">obj.test4(); // false</div><div class="line">这里需要注意的是，后三种方式都是预定定义函数，再将其附加给 obj 对象作为其方法。再次强调，函数内部的 this 指向与定义无关，受调用方式的影响。</div><div class="line"></div><div class="line">方法中 this 指向全局对象的情况</div><div class="line"></div><div class="line">注意这里说的是方法中而不是方法调用中。方法中的 this 指向全局对象，如果不是因为 bind()，那就一定是因为不是用的方法调用方式，比如</div><div class="line"></div><div class="line">const obj = &#123;</div><div class="line">test() &#123;</div><div class="line"></div><div class="line">    console.log(this === obj);</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">const t = obj.test;</div><div class="line">t(); // false</div><div class="line">t 就是 obj 的 test 方法，但是 t() 调用时，其中的 this 指向了全局。</div><div class="line"></div><div class="line">之所以要特别提出这种情况，主要是因为常常将一个对象方法作为回调传递给某个函数之后，却发现运行结果与预期不符——因为忽略了调用方式对 this 的影响。比如下面的例子是在页面中对某些事情进行封装之后特别容易遇到的问题：</div><div class="line"></div><div class="line">class Handlers &#123;</div><div class="line">// 这里 $button 假设是一个指向某个按钮的 jQuery 对象</div><div class="line"></div><div class="line">constructor(data, $button) &#123;</div><div class="line"></div><div class="line">    this.data = data;</div><div class="line"></div><div class="line">    $button.on("click", this.onButtonClick);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">onButtonClick(e) &#123;</div><div class="line"></div><div class="line">    console.log(this.data);</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">const handlers = new Handlers(“string data”, $(“#someButton”));</div><div class="line">// 对 #someButton 进行点击操作之后</div><div class="line">// 输出 undefined</div><div class="line">// 但预期是输出 string data</div><div class="line">很显然 this.onButtonClick 作为一个参数传入 on() 之后，事件触发时，是对这个函数进行的直接调用，而不是方法调用，所以其中的 this 会指向全局对象。要解决这个问题有很多种方法</div><div class="line"></div><div class="line">// 这是在 es5 中的解决办法之一</div><div class="line">var _this = this;</div><div class="line">$button.on(“click”, function() &#123;</div><div class="line">_this.onButtonClick();</div><div class="line">&#125;);</div><div class="line">// 也可以通过 bind() 来解决</div><div class="line">$button.on(“click”, this.onButtonClick.bind(this));</div><div class="line">// es6 中可以通过箭头函数来处理，在 jQuery 中慎用</div><div class="line">$button.on(“click”, e =&gt; this.onButtonClick(e));</div><div class="line">不过请注意，将箭头函数用作 jQuery 的回调时造成要小心函数内对 this 的使用。jQuery 大多数回调函数(非箭头函数)中的 this 都是表示调用目标，所以可以写 $(this).text() 这样的语句，但 jQuery 无法改变箭头函数的 this 指向，同样的语句语义完全不同。</div><div class="line"></div><div class="line">new 调用</div><div class="line"></div><div class="line">在 es6 之前，每一个函数都可以当作是构造函数，通过 new 调用来产生新的对象(函数内无特定返回值的情况下)。而 es6 改变了这种状态，虽然 class 定义的类用 typeof 运算符得到的仍然是 “function”，但它不能像普通函数一样直接调用；同时，class 中定义的方法函数，也不能当作构造函数用 new 来调用。</div><div class="line"></div><div class="line">而在 es5 中，用 new 调用一个构造函数，会创建一个新对象，而其中的 this 就指向这个新对象。这没有什么悬念，因为 new 本身就是设计来创建新对象的。</div><div class="line"></div><div class="line">var data = “Hi”; // 全局变量</div><div class="line">function AClass(data) &#123;</div><div class="line">this.data = data;</div><div class="line">&#125;</div><div class="line">var a = new AClass(“Hello World”);</div><div class="line">console.log(a.data); // Hello World</div><div class="line">console.log(data); // Hi</div><div class="line">var b = new AClass(“Hello World”);</div><div class="line">console.log(a === b); // false</div><div class="line">箭头函数中的 this</div><div class="line"></div><div class="line">先来看看 MDN 上对箭头函数的说明</div><div class="line"></div><div class="line">An arrow function expression has a shorter syntax than a function expression and does not bind its own this, arguments,super, or new.target. Arrow functions are always anonymous. These function expressions are best suited for non-method functions, and they cannot be used as constructors.</div><div class="line">这里已经清楚了说明了，箭头函数没有自己的 this 绑定。箭头函数中使用的 this，其实是直接包含它的那个函数或函数表达式中的 this。比如</div><div class="line"></div><div class="line">const obj = &#123;</div><div class="line">test() &#123;</div><div class="line"></div><div class="line">    const arrow = () =&gt; &#123;</div><div class="line"></div><div class="line">        // 这里的 this 是 test() 中的 this，</div><div class="line"></div><div class="line">        // 由 test() 的调用方式决定</div><div class="line"></div><div class="line">        console.log(this === obj);</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    arrow();</div><div class="line"></div><div class="line">&#125;,</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">getArrow() &#123;</div><div class="line"></div><div class="line">    return () =&gt; &#123;</div><div class="line"></div><div class="line">        // 这里的 this 是 getArrow() 中的 this，</div><div class="line"></div><div class="line">        // 由 getArrow() 的调用方式决定</div><div class="line"></div><div class="line">        console.log(this === obj);</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">obj.test(); // true</div><div class="line">const arrow = obj.getArrow();</div><div class="line">arrow(); // true</div><div class="line">示例中的两个 this 都是由箭头函数的直接外层函数(方法)决定的，而方法函数中的 this 是由其调用方式决定的。上例的调用方式都是方法调用，所以 this 都指向方法调用的对象，即 obj。</div><div class="line"></div><div class="line">箭头函数让大家在使用闭包的时候不需要太纠结 this，不需要通过像 _this 这样的局部变量来临时引用 this 给闭包函数使用。来看一段 Babel 对箭头函数的转译可能能加深理解：</div><div class="line"></div><div class="line">// ES6</div><div class="line">const obj = &#123;</div><div class="line">getArrow() &#123;</div><div class="line"></div><div class="line">    return () =&gt; &#123;</div><div class="line"></div><div class="line">        console.log(this === obj);</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">// ES5，由 Babel 转译</div><div class="line">var obj = &#123;</div><div class="line">getArrow: function getArrow() &#123;</div><div class="line"></div><div class="line">    var _this = this;</div><div class="line"></div><div class="line">    return function () &#123;</div><div class="line"></div><div class="line">        console.log(_this === obj);</div><div class="line"></div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">另外需要注意的是，箭头函数不能用 new 调用，不能 bind() 到某个对象(虽然 bind() 方法调用没问题，但是不会产生预期效果)。不管在什么情况下使用箭头函数，它本身是没有绑定 this 的，它用的是直接外层函数(即包含它的最近的一层函数或函数表达式)绑定的 this。</div></pre></td></tr></table></figure></p>
+
+        
+      </div>
+    </div>
+
+  
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2017 Hexo - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
